@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ 
+<!-- Título -->
+ 
+<title>:D</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<script src="https://unpkg.com/feather-icons"></script>
+ 
+<!-- fontes google -->
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+ 
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@0;1&display=swap" rel="stylesheet">
+ 
+<!----- CSS ----->
+ 
+<style type="text/css">
+ 
+/* ---------------------------- customizações -------------------------- */
+ 
+:root {
+    --body-font:'Inter';
+    --text-size:11px;
+    --text-align:justify; /* esquerda, direita ou central */
+    --title-font:'Cormorant';
+ 
+    --background-color:#180049;
+    --text-color:#00aa00; /* cor do texto */
+    --accent:#FF1493;
+    --headings:#FF1493;
+    --links:#FF69B4;
+    --borders:#00aa00;
+    --drop-cap:#000000;
+    --drop-cap-background:#FF1493;
+ 
+    --featured-image:url('http://guiadacurvatura.rf.gd/guiaDaCurvatura.jpg');
+}
+/* ---------------------------------------------------------------------- */
+ 
+/* ---  frescurinhas  --- */
+ 
+@-webkit-keyframes fadein {
+        0%   {opacity: 0;}
+        100% { opacity: 1; } }
+ 
+@-moz-keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; } }
+ 
+@keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; } }
+ 
+ 
+/*----- Estilização Básica -----*/
+ 
+body {
+    font-family:var(--body-font);
+    font-size:var(--text-size);
+    color:var(--text-color);
+    background-color:var(--background-color);
+    line-height: 170%;
+    text-align:var(--text-align);
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    -webkit-animation: fadein 1.5s;
+    -moz-animation:fadein 1.5s;
+    animation:fadein 1.5s;
+}
+ 
+a {
+    color: #FF1493; /* cor do link */
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+ 
+a:hover {
+    color: #000; /* cor hover link */
+}
+ 
+h1 {
+    font-size:calc(var(--text-size) + 1px);
+    letter-spacing:0.75px;
+    color:var(--headings);
+    font-weight: 700;
+    margin:0 0 1.25em 0;
+    text-transform: uppercase;
+}
+ 
+h1 svg {
+  width:15px;
+  height:15px;
+  stroke:var(--accent);
+  stroke-width:2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  vertical-align:middle;
+  margin-top:-3px;
+  margin-right:5px;
+}
+ 
+h2 {
+    font-size: 15px;
+    font-weight: 700;
+    word-spacing: 3px;
+    color:var(--headings);
+    margin:0;
+    padding:0;
+}
+ 
+main {
+    margin:50px auto;
+    margin-top:50px;
+    width:600px;
+    height: auto;
+    border-radius:8px;
+    box-shadow:2px 2px 7px #000000;
+    border:1px solid #000000;
+}
+ 
+#content-wrap {
+    padding:2.5em;
+    background-color:#000000;
+}
+ 
+section {
+    padding:3em;
+    border-left:1px solid var(--borders);
+    border-right:1px solid var(--borders);
+    border-bottom:1px solid var(--borders);
+}
+ 
+.featured-image {
+    width:100%;
+    height:200px;
+    background-image:var(--featured-image);
+    background-size:cover;
+    background-position:stretch;
+    border-radius:3px;
+}
+
+
+ 
+heading {
+    display:block;
+    text-align: center;
+    border: 1px solid var(--borders);
+    padding:2.5em;
+}
+ 
+heading a {
+    padding:0 3px;
+    color:var(--text-color);
+}
+ 
+heading a:hover {
+    color:var(--accent);
+}
+ 
+#wip-title {
+    font-family:var(--title-font);
+    color:var(--headings);
+    font-size:25px;
+    word-spacing: 3px;
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+ 
+.line {
+    height:1px;
+    width:75px;
+    margin:2em auto;
+    background-color:var(--text-color);
+}
+ 
+ 
+/* detalhes */
+ 
+.details-columns {
+    display: grid;
+    grid-template-columns:32% 35% 32%;
+}
+ 
+.details-columns i {
+    vertical-align:middle;
+    margin:-2px 6px 0 6px;
+}
+ 
+ 
+/*-- sinopse --*/
+ 
+.syn:first-letter {
+    display:block;
+    float:left;
+    font-family:var(--title-font);
+    font-size:calc(var(--text-size) + 8px);
+    color:var(--drop-cap);
+    background:var(--drop-cap-background);
+    font-weight:700;
+    text-transform:uppercase;
+    padding:8px 10px;
+    margin:0 5px 0 0;
+    border-radius:2px;
+}
+ 
+ 
+/* info2 */
+ 
+.char {
+    display:block;
+    margin-bottom:1.25em;
+    padding-bottom:1.25em;
+    border-bottom:1px solid var(--borders);
+}
+ 
+.char:last-of-type {
+    margin-bottom:0;
+    padding-bottom:0;
+    border-bottom:0px solid var(--borders);
+}
+ 
+.icon-left {
+    width: 50px;
+    height: 50px;
+    margin-right:1em;
+    margin-top:3px;
+    float: left;
+    border-radius:3px;
+}
+ 
+.icon-right {
+    width: 50px;
+    height: 50px;
+    margin-left:1em;
+    margin-top:3px;
+    float: right;
+    border-radius:3px;
+}
+ 
+.icon-left img, .icon-right img {
+    width: 50px;
+    height: 50px;
+
+}
+ 
+ 
+/*-- links --*/
+ 
+.link-columns {display: grid;grid-template-columns:33.3% 33.3% 33.3%;}
+ 
+.link-columns span {display:block;}
+ 
+.link-columns a {border-bottom:1px solid var(--borders);}
+ 
+.link-columns a:hover {color:var(--accent);border-bottom:1px solid var(--borders);}
+ 
+ 
+/*-- informação --*/
+ 
+.info span {display:block;margin-bottom:1.25em;}
+.info span:last-of-type {margin-bottom:0;}
+ 
+iframe.tmblr-iframe {display:none;}
+ 
+ 
+/*--- responsivo ---*/
+ 
+@media only screen and (max-width: 1100px) {
+ 
+    main {width:70%;}
+}
+ 
+/*--- dispositivos móveis ---*/
+ 
+@media only screen and (max-width: 720px) {
+    main {width: 80vw;}
+ 
+    .details-columns {
+        display: grid;
+        grid-template-columns:50% 50%;
+    }
+ 
+}
+ 
+</style>
+</head>
+<body>
+ 
+<main>
+
+    <div id="content-wrap">
+ 
+<heading class="ppp">
+ 
+<!-- links embaixo do título -->
+ 
+<a href="http://guiadacurvatura.rf.gd/inicio.html">início</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/no-e-low-poo.html">no e low poo</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/texturas.html">texturas</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/professor.html">professor</a>
+</heading>
+ 
+<section>
+<div class="featured-image"></div>
+</section>
+<!-- info Extra -->
+ 
+<section class="info">
+<h1><i data-feather="heart"></i> informações pessoais</h1>
+<span>Nome: Maria Eduarda Fodor <p>CB: 3025063</p> <p>email: fodor.e@aluno.ifsp.edu.br</p>
+<div class="line"></div>
+<h1><i data-feather="edit"></i> informações do site</h1>
+<span>Palavras-chaves: Curvatura, Cachos, Guia <p>Sitemap: Sitemap.xml</p> <p>Robots:</p> <p>Relatório Analytics:</p>
+
+
+</span>
+</section>
+ 
+</div>
+</main>
+ 
+<script>
+  feather.replace()
+</script>
+ 
+</body>
+</html>

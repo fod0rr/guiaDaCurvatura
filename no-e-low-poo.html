@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ 
+<!-- Título -->
+ 
+<title>:D</title>
+ 
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+<script src="https://unpkg.com/feather-icons"></script>
+ 
+<!-- fontes google -->
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+ 
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital@0;1&display=swap" rel="stylesheet">
+ 
+<!----- CSS ----->
+ 
+<style type="text/css">
+ 
+/* ---------------------------- customizações -------------------------- */
+ 
+:root {
+    --body-font:'Inter';
+    --text-size:11px;
+    --text-align:justify; /* esquerda, direita ou central */
+    --title-font:'Cormorant';
+ 
+    --background-color:#180049;
+    --text-color:#00aa00; /* cor do texto */
+    --accent:#FF1493;
+    --headings:#FF1493;
+    --links:#FF69B4;
+    --borders:#00aa00;
+    --drop-cap:#000000;
+    --drop-cap-background:#FF1493;
+ 
+    --featured-image:url('http://guiadacurvatura.rf.gd/guiaDaCurvatura.jpg');
+}
+/* ---------------------------------------------------------------------- */
+ 
+/* ---  frescurinhas  --- */
+ 
+@-webkit-keyframes fadein {
+        0%   {opacity: 0;}
+        100% { opacity: 1; } }
+ 
+@-moz-keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; } }
+ 
+@keyframes fadein {
+        0%   { opacity: 0; }
+        100% { opacity: 1; } }
+ 
+ 
+/*----- estilização básica -----*/
+ 
+body {
+    font-family:var(--body-font);
+    font-size:var(--text-size);
+    color:var(--text-color);
+    background-color:var(--background-color);
+    line-height: 170%;
+    text-align:var(--text-align);
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    -webkit-animation: fadein 1.5s;
+    -moz-animation:fadein 1.5s;
+    animation:fadein 1.5s;
+}
+ 
+a {
+    color: #FF1493; /* cor do link */
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+ 
+a:hover {
+    color: #000; /* cor hover link */
+}
+ 
+h1 {
+    font-size:calc(var(--text-size) + 1px);
+    letter-spacing:0.75px;
+    color:var(--headings);
+    font-weight: 700;
+    margin:0 0 1.25em 0;
+    text-transform: uppercase;
+}
+ 
+h1 svg {
+  width:15px;
+  height:15px;
+  stroke:var(--accent);
+  stroke-width:2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  vertical-align:middle;
+  margin-top:-3px;
+  margin-right:5px;
+}
+ 
+h2 {
+    font-size: 15px;
+    font-weight: 700;
+    word-spacing: 3px;
+    color:var(--headings);
+    margin:0;
+    padding:0;
+}
+ 
+main {
+    margin:50px auto;
+    margin-top:50px;
+    width:600px;
+    height: auto;
+    border-radius:8px;
+    box-shadow:2px 2px 7px #000000;
+    border:1px solid #000000;
+}
+ 
+#content-wrap {
+    padding:2.5em;
+    background-color:#000000;
+}
+ 
+section {
+    padding:3em;
+    border-left:1px solid var(--borders);
+    border-right:1px solid var(--borders);
+    border-bottom:1px solid var(--borders);
+}
+ 
+.featured-image {
+    width:100%;
+    height:200px;
+    background-image:var(--featured-image);
+    background-size:cover;
+    background-position:stretch;
+    border-radius:3px;
+}
+
+
+ 
+heading {
+    display:block;
+    text-align: center;
+    border: 1px solid var(--borders);
+    padding:2.5em;
+}
+ 
+heading a {
+    padding:0 3px;
+    color:var(--text-color);
+}
+ 
+heading a:hover {
+    color:var(--accent);
+}
+ 
+#wip-title {
+    font-family:var(--title-font);
+    color:var(--headings);
+    font-size:25px;
+    word-spacing: 3px;
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+ 
+.line {
+    height:1px;
+    width:75px;
+    margin:2em auto;
+    background-color:var(--text-color);
+}
+ 
+ 
+/* detalhes */
+ 
+.details-columns {
+    display: grid;
+    grid-template-columns:32% 35% 32%;
+}
+ 
+.details-columns i {
+    vertical-align:middle;
+    margin:-2px 6px 0 6px;
+}
+ 
+ 
+/* sinopse */
+ 
+.syn:first-letter {
+    display:block;
+    float:left;
+    font-family:var(--title-font);
+    font-size:calc(var(--text-size) + 8px);
+    color:var(--drop-cap);
+    background:var(--drop-cap-background);
+    font-weight:700;
+    text-transform:uppercase;
+    padding:8px 10px;
+    margin:0 5px 0 0;
+    border-radius:2px;
+}
+ 
+ 
+/* info2 */
+ 
+.char {
+    display:block;
+    margin-bottom:1.25em;
+    padding-bottom:1.25em;
+    border-bottom:1px solid var(--borders);
+}
+ 
+.char:last-of-type {
+    margin-bottom:0;
+    padding-bottom:0;
+    border-bottom:0px solid var(--borders);
+}
+ 
+.icon-left {
+    width: 50px;
+    height: 50px;
+    margin-right:1em;
+    margin-top:3px;
+    float: left;
+    border-radius:3px;
+}
+ 
+.icon-right {
+    width: 50px;
+    height: 50px;
+    margin-left:1em;
+    margin-top:3px;
+    float: right;
+    border-radius:3px;
+}
+ 
+.icon-left img, .icon-right img {
+    width: 50px;
+    height: 50px;
+
+}
+ 
+ 
+/* links */
+ 
+.link-columns {display: grid;grid-template-columns:33.3% 33.3% 33.3%;}
+ 
+.link-columns span {display:block;}
+ 
+.link-columns a {border-bottom:1px solid var(--borders);}
+ 
+.link-columns a:hover {color:var(--accent);border-bottom:1px solid var(--borders);}
+ 
+ 
+/* informação */
+ 
+.info span {display:block;margin-bottom:1.25em;}
+.info span:last-of-type {margin-bottom:0;}
+ 
+iframe.tmblr-iframe {display:none;}
+ 
+ 
+/*--- responsivo ---*/
+ 
+@media only screen and (max-width: 1100px) {
+ 
+    main {width:70%;}
+}
+ 
+/*--- dispositivos móveis ---*/
+ 
+@media only screen and (max-width: 720px) {
+    main {width: 80vw;}
+ 
+    .details-columns {
+        display: grid;
+        grid-template-columns:50% 50%;
+    }
+ 
+}
+ 
+</style>
+</head>
+<body>
+ 
+<main>
+
+    <div id="content-wrap">
+ 
+<heading class="ppp">
+ 
+<!-- links embaixo do título -->
+ 
+<a href="http://guiadacurvatura.rf.gd/inicio.html">início</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/no-e-low-poo.html">no e low poo</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/texturas.html">texturas</a> &sdot;
+<a href="http://guiadacurvatura.rf.gd/professor.html">professor</a>
+</heading>
+ 
+<section>
+<div class="featured-image"></div>
+</section>
+ 
+
+<!-- Sobre o site -->
+ 
+<section>
+<h1><i data-feather="edit"></i>Sobre Low/No Poo e Co-Wash</h1>
+ 
+	<div class="syn"><h2>O que é Low Poo?</h2>
+		
+<p>Low Poo é o nome de uma técnica pra lavar os cabelos ou, melhor ainda, um estilo de lavagem que privilegia um cuidado mais natural e menos agressivo com os fios. Basicamente, a ideia aqui é amenizar o impacto nocivo que algumas substâncias tradicionalmente usadas nos shampoos têm sobre a estrutura capilar, especialmente sobre a oleosidade natural dos fios. Se liga nessa curiosidade: o próprio nome “Low Poo” é uma referência à palavra shampoo. O sentido é de um shampoo com menor concentração ou com ação mais leve e suave, já que low, em Inglês, tem sentido de “pouco, menos”. Mas não dá para falar em Low Poo sem citar um nome: Lorraine Massey. Ela é a criadora dessa corrente de cuidado com os cabelos que virou febre. Lorraine é uma cabeleireira inglesa que notou a dificuldade que suas clientes - e ela própria - tinham com o cuidado dos cabelos cacheados. Problemas com ressecamento e frizz eram constantes, e aí ela resolveu estudar quais eram as substâncias presentes nas fórmulas de produtos pra cachos e como elas agiam nos fios.</p>
+<p>Lorraine percebeu que os shampoos tradicionais incluem sulfatos que são poderosos agentes de limpeza usados em detergentes de cozinha. A função principal deles é eliminar a gordura de superfícies, o que significa que ele também tem essa ação “secativa” na sua pele e nos seus cabelos, podendo até causar um ressecamento em excesso. E isso é um problema pra saúde dos fios, especialmente pra quem tem cabelos cacheados ou crespos, já que a curvatura dos fios já impede naturalmente a distribuição correta da oleosidade natural por todo o comprimento. E foi aí que ela resolveu fazer um teste: eliminar os sulfatos agressivos da sua rotina de cuidados, passando a usar alternativas mais suaves e naturais. O resultado? Cabelos mais saudáveis e menos ressecados - e o nascimento do método do Low Poo!</p>
+	<h2>Para que serve o Low Poo?</h2><p>Essa técnica serve especialmente pra cuidar de cabelos cacheados, crespos e ondulados, usando (ou eliminando totalmente) sulfatos menos agressivos e trazendo pra rotina outros ingredientes que evitam o excesso de ressecamento e possibilitam um visual mais saudável e bonito, com cachos bem definidos e sem pontas secas.</p>		
+	<h2>Efeito Rebote</h2><p>O Low Poo também pode ser usado por pessoas com cabelos lisos com esse objetivo de reduzir os químicos agressivos da rotina de cuidados. Essa técnica também ajuda a evitar o conhecido - e temido - “efeito rebote”. Esse perfil de cabelo não costuma ter problemas com ressecamento, já que a oleosidade natural consegue chegar facilmente até às pontas, mas como os shampoos tradicionais usam sulfatos agressivos, eles removem essa gordura de forma excessiva e o organismo entende que precisa produzir ainda mais oleosidade pra suprir o que foi retirado pelo sulfato. E é aí que esses cabelos começam a sofrer com a oleosidade exagerada. É por isso que o Low Poo não é um método de cuidado capilar apenas pras cacheadas: ele pode trazer benefícios pra todo mundo. Os cabelos oleosos (que também costumam sofrer com a caspa) acabam de vez com o efeito rebote causado pelos shampoos agressivos e os fios mais ressecados conseguem atingir uma hidratação natural, que era impedida pelos sulfatos potentes. Tudo, né?</p>
+	<h2>Como fazer Low Poo?</h2><p>Antes de embarcar de vez no Low Poo, é legal entender um pouquinho mais sobre como funciona a limpeza dos cabelos. Os shampoos convencionais nos acostumaram com toda aquela espuma - produzida graças aos sulfatos - que, com o tempo, passou a ser sinônimo de pureza e higiene no conceito popular. Só que a realidade é: espuma não é limpeza! Ela é só uma reação química dos ingredientes presentes na fórmula.</p>
+		<p>No Low Poo a espuma geralmente vem em menor quantidade, mas não precisa se preocupar: não há nada de errado com isso. O importante é saber que os agentes limpantes estão lá, agindo em seus fios, removendo impurezas e cuidando da saúde dos cabelos e do couro cabeludo.</p>
+		<p>Outro detalhe tem a ver com seu tipo de cabelo: quem sofre mais com ressecamento, quebra e frizz - caso dos cacheados e crespos - pode se jogar no Low Poo para garantir uma oleosidade saudável e regulada da raiz até as pontas. Quem tem fios lisos ou levemente ondulados devem utilizar a técnica como uma forma de controle: como já são fios naturalmente hidratados, a ideia aqui é apenas evitar o “efeito rebote”.</p>
+		<p>Por último, é importante frisar que o Low Poo não faz milagre sozinho: os resultados aparecem com mais facilidade se você fizer uma mudança de hábitos. Afinal, não adianta usar um shampoo Low Poo mas continuar com outros produtos - condicionadores, máscaras de tratamento, cremes de pentear, leave-ins, etc - cheios de ingredientes nocivos na sua rotina.</p>
+		<p>Esses produtos podem ter agentes como óleos, parafinas, silicones e petrolatos (derivados do petróleo) que não trazem nenhum benefício real pros seus cabelos, eles servem apenas pra encapar os fios e dar brilho de forma superficial. E quando você corta os sulfatos agressivos do shampoo tradicional, os resquícios desses agentes não são removidos e se acumulam nos fios e no couro, causando diversos problemas.</p>
+	<h2>O que é liberado para Low Poo?</h2><p>Mas como saber se um produto tem agentes agressivos na fórmula? Uma ótima dica é procurar produtos com a expressão “liberado pra Low Poo”. Caso o produto não tenha nenhum indicativo, você pode olhar a lista de ingredientes nocivos e depois dar aquele check na fórmula do shampoo que quer comprar. Esses são alguns proibidões pra ficar de olho:</p>
+		<p>Petrolatos:</p><li>Petrolatum/petrolato</li><li>Mineral Oil/óleo mineral</li><li>Parafinum Liquid/parafina líquida</li><li>Isoparaffin</li><li>C13-14 Isoparaffin</li><li>C12-20 Isoparaffin</li><li>Vaselina/vaselin</li><li>Isododecane/Isododecene</li><li>Alkane/Alcano</li><li>Dodecane/Dodecano</li><li>Dodecene/Dodeceno</li>
+		<p>Sulfatos:</p><li>Sodium Laureth Sulfate</li><li>Sodium Lauryl Ether Sulfate</li><li>Sodium Myreth Sulfate</li><li>Sodium Lauryl Sulfate / Sodium laurilsulfate</li><li>Sodium Coco Sulfate</li><li>Sodium Trideceth Sulfate</li><li>Ammonium Lauryl Sulfate</li><li>Ammonium Laureth Sulfate</li><li>Ammonium Lauryl Ether Sulfate</li><li>Sodium C14-16 Olefin Sulfonate</li><li>TEA Lauryl Sulfate</li><li>TEA-dodecylbenzenesufonate</li><li>Sodium Alkybenzene Sulfonate</li><li>Ammonium Xylenesulfonate</li><li>Sodium Xylenesulfonate</li><li>Sodium Trideceth Sulfate</li><li>Tridecyl polyoxyethylene sodium sulfate</li><li>Sodium Tridecyl Sulfate ETHER Ethanol</li><li>Sodium Tridecyl TRI (oxyethyl)</li><li>sodium 2 – [2 – [ 2 – ( tridecyloxy ) ethoxy ] ethoxy ] ethyl ester sulfate</li><li>ethanol, 2- [2- [ 2- ( tridecyloxy ) ethoxy] ethoxy] hydrogen sulfate</li><li>sodium salt</li><li>Sodium Sulfate Coconut</li><li>Lauryl sulfate</li><li>Ammonium laureth</li><li>TEA dodecylbenzenesulfonate</li><li>Alkylbenzene Sulphonate</li><li>Ammonium Xylenesulfonate</li><li>Sodium Sylenesulfonate</li>
+		<p>Ah. uma ótima dica é apostar em marcas e produtos que sejam sustentáveis e naturais, geralmente eles já são livres desses ativos potencialmente tóxicos e totalmente liberados pro Low Poo.</p>
+	<h2>No Poo</h2><p>Diferente do Low Poo, o No Poo  - como o próprio nome diz - é um método que elimina totalmente o shampoo da rotina de cuidados com o cabelo: em seu lugar, entram os bálsamos limpantes, higienizadores capilares e outras misturas naturais e caseiras que garantem a limpeza e saúde capilar, mas não levam qualquer agente químico como silicones insolúveis e petrolatos em sua composição. Por ser uma técnica ainda mais intensa de resgate da oleosidade natural, a maioria das adeptas do No Poo são cacheadas e crespas que possuem os fios naturalmente mais secos.</p>
+	<h2>Co-Wash</h2><p>Uma das soluções pra quem aderiu ao No Poo é adotar o Co-Wash que usa o condicionador no lugar do shampoo. Ah, não esqueça: o condicionador escolhido precisa ser liberado pra Low Poo e No Poo, ou seja: ser livre de sulfatos, petrolatos, óleos minerais, vaselina, parafina líquida ou silicones insolúveis. Já existem condicionadores desenvolvidos especificamente para o Co-Wash: eles recebem a adição de alguns ativos de limpeza suave, que deixam a lavagem mais completa.</p><p>Como cada tipo de cabelo é muito diferente um do outro, e cada pessoa tem rotinas variadas, expondo seus fios a situações diversas ao longo do dia, o recomendado é sempre ir com calma e analisar sem pressa os efeitos e resultados de todas essas diferentes técnicas nos seus cabelos.</p>
+		
+</div>
+</section>  
+ 
+ 
+<!-- LINKS -->
+ 
+<section>
+<h1><i data-feather="link"></i>Cabeleireiras e Marcas que sigo</h1>
+ 
+<!-- 
+    html links look like this <a href="http://www.url.com">link name</a>
+    add the url between the quotation marks and change the link name
+    link to tags, social media, intro posts, etc.
+    you can add as many as you like!
+-->
+ 
+  <div class="link-columns">
+    <div class="column"><a href="https://www.usebob.com.br/blogs/news">Blog B.O.B</a></div>
+    <div class="column"><a href="https://www.youtube.com/c/gleiciduarte">Gleici Duarte</a></div>
+    <div class="column"><a href="https://www.youtube.com/@SarahB612">Sarah Oliveira</a></div>
+    <div class="column"><a href="https://www.instagram.com/juliavieira/">Julia Vieira</a></div>
+    <div class="column"><a href="https://www.instagram.com/pazianissima/">Pazian</a></div>
+    <div class="column"><a href="https://www.instagram.com/jubacolorida/">Juba Colorida</a></div>
+</div>
+</section>
+ 
+<!-- info Extra -->
+ 
+<section class="info">
+<h1><i data-feather="star"></i> informação extra</h1>
+<span>Esse é um site de trabalho do 1º semestre de "Desenvolvimento Web" e aqui falarei algumas coisinhas sobre texturas e cuidados de cabelos com curvatura ;)
+</span>
+</section>
+ 
+</div>
+</main>
+ 
+<script>
+  feather.replace()
+</script>
+ 
+</body>
+</html>
